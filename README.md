@@ -1,5 +1,7 @@
 # Ruby on Rails Tutorial sample application
 
+**NOTE:** This repository is not from the most recent version of the tutorial. For the most up-to-date code, see the [current reference implementation](https://github.com/mhartl/sample_app_6th_ed) and the [current (6th) edition](https://www.railstutorial.org/book) of the [Ruby on Rails Tutorial](https://www.railstutorial.org/).
+
 This is the reference implementation of the sample application for the 4th edition of [*Ruby on Rails Tutorial: Learn Web Development with Rails*](http://www.railstutorial.org/) by [Michael Hartl](http://www.michaelhartl.com/).
 
 ## Help page
