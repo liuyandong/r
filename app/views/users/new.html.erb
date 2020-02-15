@@ -1,23 +1,29 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<h1>注册新用户</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
+
       <%= render 'shared/error_messages', object: f.object %>
-      <%= f.label :name %>
+	  
+      <%= rucaptcha_input_tag(class: 'form-control', placeholder: '输入下面这个车牌号') %>
+      <%= rucaptcha_image_tag(alt: 'Captcha') %>
+	  
+	  <p>
+      <%= f.label :name, "用户名" %>
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :email %>
+      <%= f.label :email, "电子邮件" %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :password %>
+      <%= f.label :password, "密码" %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "确认密码" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit "亲自创建账号 :)", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

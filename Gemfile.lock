@@ -346,6 +346,8 @@ GEM
       netrc (~> 0.8)
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
+    rucaptcha (2.5.2)
+      railties (>= 3.2)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -420,6 +422,7 @@ DEPENDENCIES
   puma (= 3.9.1)
   rails (= 5.1.6)
   rails-controller-testing (= 1.0.2)
+  rucaptcha
   sass-rails (= 5.0.6)
   spring (= 2.0.2)
   spring-watcher-listen (= 2.0.1)
@@ -431,4 +434,4 @@ DEPENDENCIES
   will_paginate (= 3.1.6)
 
 BUNDLED WITH
-   1.16.2
+   1.17.2

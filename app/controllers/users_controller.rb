@@ -20,9 +20,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
+    if verify_rucaptcha?(@user) && @user.save
       @user.send_activation_email
-      flash[:info] = "Please check your email to activate your account."
+      flash[:info] = "目前账户没有激活，如果你是购买了课程的用户，请联系栋哥"
       redirect_to root_url
     else
       render 'new'
