@@ -6,8 +6,8 @@
     <%= form_for(@user) do |f| %>
 
       <%= render 'shared/error_messages', object: f.object %>
-	  
-      <%= rucaptcha_input_tag(class: 'form-control', placeholder: '输入下面这个车牌号') %>
+      
+      <%= rucaptcha_input_tag(class: 'form-control', placeholder: '输入下面这个车牌号，看不清点一下换一个 :)') %>
       <%= rucaptcha_image_tag(alt: 'Captcha') %>
 	  
 	  <p>

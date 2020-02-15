@@ -10,6 +10,7 @@
 /* universal */
 
 body {
+	font-size: 1.5em;
   padding-top: 60px;
 }
 
@@ -36,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -62,7 +63,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -70,8 +71,30 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
+  color: #1DA1F2;
   text-decoration: none;
+}
+
+a:hover {
+    text-decoration-color: #ffe000;
+	text-decoration-thickness: 0.2em;
+}
+
+/* highlight */
+mark {
+    border-radius: 1em 0 1em 0;
+    background-image: linear-gradient(-100deg, 
+rgba(255, 224, 0, 0.3), rgba(255, 224, 0, 0.7) 95%, rgba(255, 224, 0, 0.1));
+}
+
+.red-sketch-underline {
+    background: url(red-sketch-line.png) bottom left/100% 0.75rem no-repeat;
+    padding-bottom: 0.1rem;
+}
+
+.green-sketch-underline {
+    background: url(green-sketch-line.png) bottom left/100% 0.75rem no-repeat;
+    padding-bottom: 0.1rem;
 }
 
 /* footer */
@@ -85,10 +108,12 @@ footer {
 
 footer a {
   color: #555;
+  text-decoration:underline;
 }
 
 footer a:hover {
   color: #222;
+  text-decoration-thickness: 0.2em;
 }
 
 footer small {
