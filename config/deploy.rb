@@ -2,7 +2,7 @@
 lock "~> 3.12.0"
 
 set :application, "r"
-set :repo_url, "git@github.com:me/r.git"
+set :repo_url, "git@github.com:liuyandong/r.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -21,7 +21,7 @@ set :deploy_to, "/home/deploy/r"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/master.key"
+append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor/bundle", "public/system", "public/uploads"
