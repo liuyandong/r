@@ -24,4 +24,4 @@
 /spring/*.pid
 
 # Ignore uploaded test images.
-/public/uploads
+/public/uploadsconfig/database.yml
