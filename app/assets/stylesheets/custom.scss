@@ -88,12 +88,12 @@ rgba(255, 224, 0, 0.3), rgba(255, 224, 0, 0.7) 95%, rgba(255, 224, 0, 0.1));
 }
 
 .red-sketch-underline {
-    background: url(red-sketch-line.png) bottom left/100% 0.75rem no-repeat;
+    background: url(asset-path('red-sketch-line.png')) bottom left/100% 0.75rem no-repeat;
     padding-bottom: 0.1rem;
 }
 
 .green-sketch-underline {
-    background: url(green-sketch-line.png) bottom left/100% 0.75rem no-repeat;
+    background: url(asset-path('green-sketch-line.png')) bottom left/100% 0.75rem no-repeat;
     padding-bottom: 0.1rem;
 }
 
