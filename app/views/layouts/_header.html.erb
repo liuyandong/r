@@ -14,8 +14,12 @@
 
 		<div class="collapse navbar-collapse" id="alignment-example">
 
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-right">
+				<% if logged_in? %>
 				<li><%= link_to "亲自发帖", root_path %></li>
+				<%else%>
+				<li><%= link_to "网站首页", root_path %></li>
+				<%end%>
 				<li><%= link_to "网站帮助", help_path %></li>
 				<% if logged_in? %>
 				<li><%= link_to "用户列表", users_path %></li>				
