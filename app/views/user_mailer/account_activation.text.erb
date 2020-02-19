@@ -1,7 +1,5 @@
-你好， <%= @user.name %>,
+Hi, <%= @user.name %>,
 
-欢迎来到绿帽子大学，你的邮箱是: <%= @user.email %>, 这是一个实验性质的网站，不要传重要信息和敏感数据在上面。
-
-下面这个链接是激活链接，只能用一次 :)
+Welcome
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
