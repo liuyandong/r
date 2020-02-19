@@ -1,5 +1,10 @@
 Hi, <%= @user.name %>,
 
-Welcome
+欢迎来到绿帽子大学。
+
+你的用户名是:   <%= @user.name %>
+你的电子邮件是:  <%= @user.email %>
+
+点下面这个链接可以激活:
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
