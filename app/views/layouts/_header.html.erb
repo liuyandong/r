@@ -16,7 +16,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<% if logged_in? %>
-				<li><%= link_to "亲自发帖", root_path %></li>
+				<li><%= link_to "写条微博", root_path %></li>
 				<%else%>
 				<li><%= link_to "网站首页", root_path %></li>
 				<%end%>
@@ -30,11 +30,11 @@
 								<li><%= link_to "个性设置", edit_user_path(current_user) %></li>
 								<li class="divider"></li>
 								<li>
-									<%= link_to "亲自退出", logout_path, method: :delete %>
+									<%= link_to "退出登录", logout_path, method: :delete %>
 								</li>
 						</li>
 						<% else %>
-						<li><%= link_to "亲自登录", login_path %></li>
+						<li><%= link_to "登录账户", login_path %></li>
 						<% end %>
 					</ul>
 				</li>
