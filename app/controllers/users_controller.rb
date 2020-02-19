@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if verify_rucaptcha?(@user) && @user.save
       @user.send_activation_email
-      flash[:info] = "目前账户没有激活，如果你是购买了课程的用户，请联系栋哥"
+      flash[:info] = "目前账户未激活，想激活请联系栋哥，并告知你的电子邮件和是否购买了课程，谢谢。"
       redirect_to root_url
     else
       render 'new'
