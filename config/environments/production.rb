@@ -67,13 +67,13 @@ Rails.application.configure do
   host = 'lmzdx.net'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.gmail.com',
+    :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => 'lvmaozidaxue@gmail.com',
-    :password       => 'kljdxrrqpngzpigd',
-    #:domain         => 'heroku.com',
-    #:enable_starttls_auto => true
+    :user_name      => 'liuyandong',
+    :password       => 'T0singhua@',
+    :domain         => 'lmzdx.net',
+    :enable_starttls_auto => true
   }
   
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
