@@ -67,11 +67,11 @@ Rails.application.configure do
   host = 'lmzdx.net'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
+    :address        => 'smtp.sendcloud.net',
     :port           => '587',
     :authentication => :plain,
     :user_name      => 'liuyandong',
-    :password       => 'T0singhua@',
+    :password       => 't0singhua@',
     :domain         => 'lmzdx.net',
     :enable_starttls_auto => true
   }
