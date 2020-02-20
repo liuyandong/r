@@ -21,8 +21,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if verify_rucaptcha?(@user) && @user.save
-      @user.send_activation_email
-      flash[:info] = "目前账户未激活，想激活请查看自己的邮箱，如果还有问题请联系我，谢谢。"
+      #@user.send_activation_email
+      @user.activate
+      @user.follow(User.find(1))
+      (User.find(1)).follow(@user)
+      flash[:info] = "注册成功，可以点击右上角登录了，如果有问题，记得联系我 :)"
       redirect_to root_url
     else
       render 'new'
