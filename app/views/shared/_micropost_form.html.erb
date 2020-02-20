@@ -1,7 +1,7 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "文字最多1K，图片最大1M。" %>
+    <%= f.text_area :content, placeholder: "文字最多500字，图片最大1M。" %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
