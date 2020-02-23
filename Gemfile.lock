@@ -361,10 +361,12 @@ GEM
       json (>= 1.8)
       nokogiri (~> 1.5)
       trollop (~> 2.1)
+    redcarpet (3.5.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rouge (3.16.0)
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     ruby_identicon (0.0.5)
@@ -452,6 +454,8 @@ DEPENDENCIES
   puma (= 3.9.1)
   rails (= 5.1.6)
   rails-controller-testing (= 1.0.2)
+  redcarpet
+  rouge
   ruby_identicon
   rucaptcha
   sass-rails (= 5.0.6)
