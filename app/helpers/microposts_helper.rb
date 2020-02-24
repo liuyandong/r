@@ -1,16 +1,33 @@
 module MicropostsHelper
 
-  def markdown(content)
-    render = Redcarpet::Render::HTML.new(hard_wrap: true, filter_html: true)
-    options = {
+  require 'redcarpet'
+  require 'rouge'
+  require 'rouge/plugins/redcarpet'
+
+  class HTML < Redcarpet::Render::HTML
+    include Rouge::Plugins::Redcarpet
+  end
+
+  def markdown(text)
+    render_options = {
+      # filer_html: true, 
+      hard_wrap: true,
+      link_attributes: { rel: 'nofollow' },
+      prettify: true
+    }
+    renderer = HTML.new(render_options)
+    extras = {
       autolink: true,
       no_intra_emphasis: true,
       disable_indented_code_blocks: true,
       fenced_code_blocks: true,
-      striketchrouth: true,
-      superscript: true
+      strikethrough: true,
+      superscript: true,
+      lax_spacing: true
     }
-    Redcarpet::Markdown.new(render, options).render(content).html_safe
+
+  markdown = Redcarpet::Markdown.new(renderer, extras)
+    raw markdown.render(text)
   end
 
 end
