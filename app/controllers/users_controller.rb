@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       @user.activate
       @user.follow(User.find(1))
       (User.find(1)).follow(@user)
-      flash[:info] = "注册成功，可以点击右上角登录了，如果有问题，记得联系我 :)"
+      flash[:info] = "注册成功，不用激活，可以点击右上角登录了，如果有问题，记得联系我 :)"
       redirect_to root_url
     else
       render 'new'
